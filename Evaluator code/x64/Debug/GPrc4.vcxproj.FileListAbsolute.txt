@@ -1,2 +1,0 @@
-C:\Users\User\Documents\Proyecto Editor Grafos (tfg)\Practica\Evaluator\x64\Debug\GPrc4.exe
-C:\Users\User\Documents\Proyecto Editor Grafos (tfg)\Practica\Evaluator\x64\Debug\GPrc4.pdb
