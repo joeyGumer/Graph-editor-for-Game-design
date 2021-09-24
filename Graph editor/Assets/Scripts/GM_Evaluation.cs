@@ -139,7 +139,6 @@ public class GM_Evaluation : MonoBehaviour
     //Setters
     void SetShowMode(showMode mode)
     {
-        //WARNING it has to be less than last
         if ((uint)mode < (uint)showMode.SHW_IDLE + 1)
         {
             currentShowMode = mode;
@@ -385,8 +384,6 @@ public class GM_Evaluation : MonoBehaviour
     void ReadEvaluationFile(evaluationMode mode)
     {
         string path = Application.dataPath + "/../../GraphEvaluator/GraphEvaluation.out";
-
-        //WARNING: make it safe if there is no file
         switch (mode)
         {
             case evaluationMode.EVL_PATH:
@@ -606,7 +603,6 @@ public class GM_Evaluation : MonoBehaviour
 
                     Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
-                    //WARNING maybe get graph manager hit?
                     RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
                     if(hit.collider != null)
                     {

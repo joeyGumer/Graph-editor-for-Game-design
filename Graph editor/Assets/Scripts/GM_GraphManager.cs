@@ -61,13 +61,9 @@ public class GM_GraphManager : MonoBehaviour
     public Button BTN_cmdEvaluation;
     public Toggle BTN_cmdShowWeights;
 
-    bool cmdChangeProhibited = false;
 
     public GameObject PANEL_Edge;
-
     public GameObject PNL_Evaluation;
-
-    //WARNING: temporal
     public GameObject prev_vertex;
 
     //-------------METHODS
@@ -140,7 +136,7 @@ public class GM_GraphManager : MonoBehaviour
         return false;
     }
 
-    //WARNING: look how to define this externally
+
     //Adds vertex in the position specified
     void AddVertex(Vector2 pos)
     {
@@ -160,8 +156,6 @@ public class GM_GraphManager : MonoBehaviour
 
     void ResetGraph()
     {
-        //WARNING: Can't use foreach as we are removing members of the list as we iterate
-        //WARNING SHOULD NOT DEACTIVATE THE PANEL HERE;
         PANEL_Edge.SetActive(false);
         int size = g_vertices.Count;
         for (int i = 0; i < size; i++)
@@ -296,8 +290,6 @@ public class GM_GraphManager : MonoBehaviour
         btn = BTN_cmdReset.GetComponent<Button>();
         btn.onClick.AddListener(ResetGraph);
 
-        
-        //WARNING, change thisOn);
         BTN_cmdShowWeights.onValueChanged.AddListener(ShowWeights);
     }
 
@@ -347,7 +339,7 @@ public class GM_GraphManager : MonoBehaviour
 
                 }
                 else
-                    PANEL_Edge.SetActive(false); //WARNING: Should do a bool to not do this everyframe
+                    PANEL_Edge.SetActive(false); 
 
             }
             //Management of commands selected

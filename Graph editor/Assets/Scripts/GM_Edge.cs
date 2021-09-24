@@ -25,10 +25,8 @@ public class GM_Edge : MonoBehaviour
     bool e_openPanel = false;
     //----------------METHODS
     //Setters
-    //WARNING: THINK ABOUT HOW DESTROY EDGES AND VERTICES
     public void SetVertices(GameObject v1, GameObject v2)
     {
-        //WARNING: look if it's better to check this in another place
         if (v1 != null && v2 != null && v1.CompareTag("Vertex") && v2.CompareTag("Vertex"))
         {
             e_vertex1 = v1;

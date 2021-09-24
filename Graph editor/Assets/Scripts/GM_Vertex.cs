@@ -36,7 +36,6 @@ public class GM_Vertex : MonoBehaviour
         }
     }
 
-    //WARNING: i don't totally like how this is implemented
     public void AddEdge(GameObject vertex, GameObject edge)
     {
         if (edge != null && vertex != null && vertex.CompareTag("Vertex") && edge.CompareTag("Edge"))
@@ -67,7 +66,6 @@ public class GM_Vertex : MonoBehaviour
 
    public void DeleteIncidentEdges()
     {
-        //WARNING: check if there's a better way to do this
         //There seems to be an error here
         int size = v_edges.Count;
         for (int i = 0; i< size; i++)
